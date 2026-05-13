@@ -1,0 +1,31 @@
+# Build output
+target/
+dist/
+build/
+out/
+
+# Node / Angular
+node_modules/
+.angular/
+*.log
+npm-debug.log*
+
+# Secrets and keys
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.key
+
+# IDE / editor
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db

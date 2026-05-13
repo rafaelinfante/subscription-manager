@@ -1,0 +1,13 @@
+/* Tailwind theme + utilities only (preflight is skipped so it does not reset Angular Material). */
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f6f7f9;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
