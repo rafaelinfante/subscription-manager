@@ -26,8 +26,13 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
-      - uses: github/codeql-action/init@v3
+      - uses: github/codeql-action/init@v4
         with:
-          language: ${{ matrix.language }}
-      - uses: github/codeql-action/autobuild@v3
-      - uses: github/codeql-action/analyze@v3
+          languages: ${{ matrix.language }}
+
+      - name: Build (Java)
+        if: matrix.language == 'java-kotlin'
+        working-directory: backend
+        run: ./mvnw clean package -DskipTests -B
+
+      - uses: github/codeql-action/analyze@v4
